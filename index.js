@@ -46,3 +46,10 @@ console.log(studyTimer.reset()); // Stopwatch {label: 'Учёба', seconds: 0}
 console.log(workTimer.tick().tick().tick().format()); // Работа: 00:03
 console.log(restTimer.tick().tick().tick().tick().format()); // Отдых: 00:04
 console.log(studyTimer.tick().tick().tick().tick().tick().format()); // Учёба: 00:05
+
+console.log(typeof Stopwatch === "function"); // true
+console.log(Stopwatch.prototype.hasOwnProperty('tick')); // true
+console.log(workTimer.hasOwnProperty('tick')); // false
+console.log(workTimer.tick === restTimer.tick); // true
+
+// Класс во всех случаях ведёт себя так же, как прототип, и выдаёт тот же самый результат.
