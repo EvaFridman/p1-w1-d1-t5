@@ -53,3 +53,9 @@ console.log(workTimer.hasOwnProperty('tick')); // false
 console.log(workTimer.tick === restTimer.tick); // true
 
 // Класс во всех случаях ведёт себя так же, как прототип, и выдаёт тот же самый результат.
+
+console.log(workTimer instanceof Stopwatch); // true
+console.log(workTimer instanceof Object); // true
+console.log([] instanceof Stopwatch); // false
+
+// instanceof проверяет, находится ли объект Stopwatch.prototype в цепочке прототипов проверяемого объекта
